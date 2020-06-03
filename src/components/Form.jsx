@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 import useCurrency from '../hooks/useCurrency';
 import useCryptocurrency from '../hooks/useCryptocurrency';
 import axios from 'axios';
+import Error from './Error';
 
 const Button = styled.input`
   margin-top: 20px;
@@ -64,7 +65,7 @@ const Form = () => {
 
   return (
     <form action="" onSubmit={quoteCurrency}>
-      {error ? 'There is an error' : null}
+      {error ? <Error message="All fields are required." /> : null}
       <SelectCurrency />
       <SelectCryptocurrency />
       <Button type="submit" value="Calculate" />
