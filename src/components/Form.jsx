@@ -26,6 +26,7 @@ const Button = styled.input`
 const Form = () => {
   // State de listado de criptomonedas
   const [listcrypto, setListcrypto] = useState([]);
+  const [error, setError] = useState(false);
 
   const CURRENCIES = [
     { code: 'USD', name: 'US Dollar' },
@@ -48,8 +49,22 @@ const Form = () => {
     };
     fetchAPI();
   }, []);
+
+  // Cuando el usuario hace submit
+  const quoteCurrency = (event) => {
+    event.preventDefault();
+    //Validar si ambos campos están llenos.
+    if (currency.trim() === '' || cryptocurrency.trim() === '') {
+      setError(true);
+      return;
+    }
+    //Pasar los datos al componente principal
+    setError(false);
+  };
+
   return (
-    <form action="">
+    <form action="" onSubmit={quoteCurrency}>
+      {error ? 'There is an error' : null}
       <SelectCurrency />
       <SelectCryptocurrency />
       <Button type="submit" value="Calculate" />
