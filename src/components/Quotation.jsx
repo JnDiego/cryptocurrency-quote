@@ -1,26 +1,42 @@
 import React from 'react';
+import styled from '@emotion/styled';
+
+const ResultContainer = styled.div`
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  span {
+    font-weight: bold;
+  }
+`;
+
+const Info = styled.p`
+  font-size: 18px;
+`;
+
+const Price = styled.p`
+  font-size: 30px;
+`;
 
 const Quotation = ({ result }) => {
   if (Object.keys(result).length === 0) return null;
-  console.log(result);
   return (
-    <div>
-      <p>
+    <ResultContainer>
+      <Price>
         The price is: <span>{result.PRICE}</span>
-      </p>
-      <p>
+      </Price>
+      <Info>
         Highest price of the day: <span>{result.HIGHDAY}</span>
-      </p>
-      <p>
+      </Info>
+      <Info>
         Lowest price of the day: <span>{result.LOWDAY}</span>
-      </p>
-      <p>
+      </Info>
+      <Info>
         Variation last 24 hours: <span>{result.CHANGEPCT24HOUR}</span>
-      </p>
-      <p>
+      </Info>
+      <Info>
         Last update: <span>{result.LASTUPDATE}</span>
-      </p>
-    </div>
+      </Info>
+    </ResultContainer>
   );
 };
 
