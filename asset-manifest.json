@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/cryptocurrency-quote/static/css/main.b68f887b.chunk.css",
+    "main.js": "/cryptocurrency-quote/static/js/main.cb67253a.chunk.js",
+    "main.js.map": "/cryptocurrency-quote/static/js/main.cb67253a.chunk.js.map",
+    "runtime-main.js": "/cryptocurrency-quote/static/js/runtime-main.08c7cf49.js",
+    "runtime-main.js.map": "/cryptocurrency-quote/static/js/runtime-main.08c7cf49.js.map",
+    "static/js/2.6888b1ea.chunk.js": "/cryptocurrency-quote/static/js/2.6888b1ea.chunk.js",
+    "static/js/2.6888b1ea.chunk.js.map": "/cryptocurrency-quote/static/js/2.6888b1ea.chunk.js.map",
+    "index.html": "/cryptocurrency-quote/index.html",
+    "precache-manifest.ae36237b883c0445505671dbf5df7326.js": "/cryptocurrency-quote/precache-manifest.ae36237b883c0445505671dbf5df7326.js",
+    "service-worker.js": "/cryptocurrency-quote/service-worker.js",
+    "static/css/main.b68f887b.chunk.css.map": "/cryptocurrency-quote/static/css/main.b68f887b.chunk.css.map",
+    "static/js/2.6888b1ea.chunk.js.LICENSE.txt": "/cryptocurrency-quote/static/js/2.6888b1ea.chunk.js.LICENSE.txt",
+    "static/media/cryptomonedas.png": "/cryptocurrency-quote/static/media/cryptomonedas.96e45d69.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.08c7cf49.js",
+    "static/js/2.6888b1ea.chunk.js",
+    "static/css/main.b68f887b.chunk.css",
+    "static/js/main.cb67253a.chunk.js"
+  ]
+}
