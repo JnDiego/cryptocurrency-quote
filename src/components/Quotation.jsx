@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import PropTypes from 'prop-types';
 
 const ResultContainer = styled.div`
   color: #fff;
@@ -38,6 +39,10 @@ const Quotation = ({ result }) => {
       </Info>
     </ResultContainer>
   );
+};
+
+Quotation.propTypes = {
+  result: PropTypes.object.isRequired,
 };
 
 export default Quotation;

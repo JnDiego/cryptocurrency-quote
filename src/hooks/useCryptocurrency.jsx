@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import styled from '@emotion/styled';
+import PropTypes from 'prop-types';
 
 const Label = styled.label`
   font-family: 'Bebas Neue', cursive;
@@ -43,6 +44,12 @@ const useCryptocurrency = (label, initialState, OPTIONS) => {
 
   // Retornar state, interfaz y función que modifica el state
   return [state, SelectCryptocurrency, setState];
+};
+
+useCryptocurrency.propTypes = {
+  label: PropTypes.string,
+  initialState: PropTypes.string,
+  OPTIONS: PropTypes.string,
 };
 
 export default useCryptocurrency;

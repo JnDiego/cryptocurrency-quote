@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
+import PropTypes from 'prop-types';
 
 import useCurrency from '../hooks/useCurrency';
 import useCryptocurrency from '../hooks/useCryptocurrency';
@@ -73,6 +74,11 @@ const Form = ({ setCurrency, setCryptocurrency }) => {
       <Button type="submit" value="Calculate" />
     </form>
   );
+};
+
+Form.propTypes = {
+  setCurrency: PropTypes.func.isRequired,
+  setCryptocurrency: PropTypes.func.isRequired,
 };
 
 export default Form;
