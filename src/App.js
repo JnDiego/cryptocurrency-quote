@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 import image from './cryptomonedas.png';
 import Form from './components/Form.jsx';
+import Quotation from './components/Quotation.jsx';
 import axios from 'axios';
 
 const Container = styled.div`
@@ -40,6 +41,7 @@ const MainHeader = styled.h1`
 function App() {
   const [currency, setCurrency] = useState('');
   const [cryptocurrency, setCryptocurrency] = useState('');
+  const [result, setResult] = useState({});
   useEffect(() => {
     const quoteCryptocurrency = async () => {
       // Se evita la ejecución por primera vez
@@ -48,7 +50,8 @@ function App() {
       //Consultar la API para obtener cotización
       const url = `https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${cryptocurrency}&tsyms=${currency}`;
       const result = await axios.get(url);
-      console.log(result.data.DISPLAY[cryptocurrency][currency]);
+
+      setResult(result.data.DISPLAY[cryptocurrency][currency]);
     };
     quoteCryptocurrency();
   }, [currency, cryptocurrency]);
@@ -60,6 +63,7 @@ function App() {
       <div className="">
         <MainHeader>Quote cryptocurrencies instantly</MainHeader>
         <Form setCurrency={setCurrency} setCryptocurrency={setCryptocurrency} />
+        <Quotation result={result} />
       </div>
     </Container>
   );
